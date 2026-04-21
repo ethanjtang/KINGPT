@@ -1,0 +1,1200 @@
+<|puzzle-start|>
+<|position-start|>
+FEN: 3kq3/1p2p3/p2pQn2/2pPbP2/2P1P3/3K4/PP1BN1r1/8 w - - 6 30
+Best move (UCI): d2a5
+Best move (SAN): Ba5+
+<|position-end|>
+<|position-start|>
+FEN: 3kq3/4p3/pp1pQn2/B1pPbP2/2P1P3/3K4/PP2N1r1/8 w - - 0 31
+Best move (UCI): a5b6
+Best move (SAN): Bxb6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 4rk2/p4ppp/2p5/1bNp4/7P/K1P5/P7/4R3 w - - 6 32
+Best move (UCI): c5d7
+Best move (SAN): Nd7+
+<|position-end|>
+<|position-start|>
+FEN: 4r1k1/p2N1ppp/2p5/1b1p4/7P/K1P5/P7/4R3 w - - 8 33
+Best move (UCI): e1e8
+Best move (SAN): Rxe8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r6r/pp1q1pk1/3p2b1/6R1/2B1P3/5P1p/PP3QP1/6RK b - - 6 26
+Best move (UCI): h3g2
+Best move (SAN): hxg2+
+<|position-end|>
+<|position-start|>
+FEN: r6r/pp1q1pk1/3p2b1/6R1/2B1P3/5P2/PP3QK1/6R1 b - - 0 27
+Best move (UCI): d7h3
+Best move (SAN): Qh3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r3k2r/p5pp/3p1b2/1p6/3P4/3b3P/PP1N2P1/R1BBK2R b KQkq - 0 19
+Best move (UCI): f6h4
+Best move (SAN): Bh4+
+<|position-end|>
+<|position-start|>
+FEN: r3k2r/p5pp/3p4/1p6/3P3b/3b2PP/PP1N4/R1BBK2R b KQkq - 0 20
+Best move (UCI): h4g3
+Best move (SAN): Bxg3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: rn1q1rk1/p1p1bpp1/3p1n1p/1p2p3/1Pb1N3/P3PN2/2QP1PPP/RBB1K2R w KQ - 0 12
+Best move (UCI): e4f6
+Best move (SAN): Nxf6+
+<|position-end|>
+<|position-start|>
+FEN: rn1q1rk1/p1p2pp1/3p1b1p/1p2p3/1Pb5/P3PN2/2QP1PPP/RBB1K2R w KQ - 0 13
+Best move (UCI): c2h7
+Best move (SAN): Qh7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 7k/ppp1q1p1/7p/8/1PQ2R2/2P1r2P/1P4P1/5K2 b - - 1 27
+Best move (UCI): e3e1
+Best move (SAN): Re1+
+<|position-end|>
+<|position-start|>
+FEN: 7k/ppp1q1p1/7p/8/1PQ2R2/2P4P/1P3KP1/4r3 b - - 3 28
+Best move (UCI): e7e3
+Best move (SAN): Qe3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/pp4kp/2p2p2/3p3r/6p1/4Qn1q/PPP2PRP/R6K b - - 3 28
+Best move (UCI): h3h2
+Best move (SAN): Qxh2+
+<|position-end|>
+<|position-start|>
+FEN: 8/pp4kp/2p2p2/3p3r/6p1/4Qn2/PPP2P1R/R6K b - - 0 29
+Best move (UCI): h5h2
+Best move (SAN): Rxh2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1r2r3/kpN5/p3b1p1/2p2pP1/2Pb1P1p/1R1P3P/q5BK/1R6 w - - 0 30
+Best move (UCI): b3b7
+Best move (SAN): Rxb7+
+<|position-end|>
+<|position-start|>
+FEN: 4r3/krN5/p3b1p1/2p2pP1/2Pb1P1p/3P3P/q5BK/1R6 w - - 0 31
+Best move (UCI): b1b7
+Best move (SAN): Rxb7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/pp5k/2p3N1/2P2Pqp/1P2p1rR/P1B1P3/3P1R2/7K b - - 0 35
+Best move (UCI): g4g1
+Best move (SAN): Rg1+
+<|position-end|>
+<|position-start|>
+FEN: 8/pp5k/2p3N1/2P2Pqp/1P2p2R/P1B1P3/3P1R1K/6r1 b - - 2 36
+Best move (UCI): g5g3
+Best move (SAN): Qg3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: rnb5/p1pp3Q/p7/6k1/5p2/1P6/5b1P/R1B4K b - - 4 31
+Best move (UCI): c8b7
+Best move (SAN): Bb7+
+<|position-end|>
+<|position-start|>
+FEN: rn6/pbpp4/p7/6k1/4Qp2/1P6/5b1P/R1B4K b - - 6 32
+Best move (UCI): b7e4
+Best move (SAN): Bxe4#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/pp2Q3/2p2Pp1/6r1/3p2k1/3P4/PPP1r2P/5RK1 b - - 2 34
+Best move (UCI): g4h3
+Best move (SAN): Kh3+
+<|position-end|>
+<|position-start|>
+FEN: 8/pp2Q3/2p2Pp1/6r1/3p4/3P3k/PPP1r2P/5R1K b - - 4 35
+Best move (UCI): e2h2
+Best move (SAN): Rxh2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: rn2r3/p5kp/2p3p1/1p3bb1/8/NQP2PP1/PP2N2P/4RK1R b - - 1 19
+Best move (UCI): f5h3
+Best move (SAN): Bh3+
+<|position-end|>
+<|position-start|>
+FEN: rn2r3/p5kp/2p3p1/1p4b1/8/NQP2PPb/PP2N2P/4R1KR b - - 3 20
+Best move (UCI): g5e3
+Best move (SAN): Be3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1kr5/4R1pp/b4p2/1pB5/1NqP4/7P/1KP2P2/8 w - - 0 35
+Best move (UCI): b4a6
+Best move (SAN): Nxa6+
+<|position-end|>
+<|position-start|>
+FEN: k1r5/4R1pp/N4p2/1pB5/2qP4/7P/1KP2P2/8 w - - 1 36
+Best move (UCI): e7a7
+Best move (SAN): Ra7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r3r1k1/1p2Rpbp/p2q1np1/2p2b2/2Q5/2N3P1/PPP2PBP/R1B3K1 w - - 0 17
+Best move (UCI): c4f7
+Best move (SAN): Qxf7+
+<|position-end|>
+<|position-start|>
+FEN: r3r2k/1p2RQbp/p2q1np1/2p2b2/8/2N3P1/PPP2PBP/R1B3K1 w - - 1 18
+Best move (UCI): f7g7
+Best move (SAN): Qxg7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1k2r3/p2Q4/8/P6p/2b1r1p1/6P1/6PP/2R4K b - - 0 38
+Best move (UCI): e4e1
+Best move (SAN): Re1+
+<|position-end|>
+<|position-start|>
+FEN: 1k2r3/p2Q4/8/P6p/2b3p1/6P1/6PP/4R2K b - - 0 39
+Best move (UCI): e8e1
+Best move (SAN): Rxe1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 5R1r/pkp5/1p2p3/8/P7/1B1P2Qp/1PP1q1P1/5R1K b - - 0 30
+Best move (UCI): h3g2
+Best move (SAN): hxg2+
+<|position-end|>
+<|position-start|>
+FEN: 5R1r/pkp5/1p2p3/8/P7/1B1P2Q1/1PP1q1p1/5RK1 b - - 1 31
+Best move (UCI): h8h1
+Best move (SAN): Rh1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: k2r2r1/pp6/2p2R2/3p2p1/1qnP4/1PN3QP/P1P2PB1/2KR4 b - - 0 28
+Best move (UCI): b4a3
+Best move (SAN): Qa3+
+<|position-end|>
+<|position-start|>
+FEN: k2r2r1/pp6/2p2R2/3p2p1/2nP4/qPN3QP/P1P2PB1/1K1R4 b - - 2 29
+Best move (UCI): a3b2
+Best move (SAN): Qb2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r2n3r/3k1pp1/4pb1p/1N1p4/1p1P1Q2/8/1qPK1PPP/3RR3 w - - 0 24
+Best move (UCI): f4d6
+Best move (SAN): Qd6+
+<|position-end|>
+<|position-start|>
+FEN: r2nk2r/5pp1/3Qpb1p/1N1p4/1p1P4/8/1qPK1PPP/3RR3 w - - 2 25
+Best move (UCI): b5c7
+Best move (SAN): Nc7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r3r3/1p5R/1kp3p1/8/1PK2B2/4PP2/7P/q3R3 w - - 0 29
+Best move (UCI): f4c7
+Best move (SAN): Bc7+
+<|position-end|>
+<|position-start|>
+FEN: r3r3/kpB4R/2p3p1/8/1PK5/4PP2/7P/q3R3 w - - 2 30
+Best move (UCI): e1a1
+Best move (SAN): Rxa1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 5k2/6p1/4Rp1p/6rP/3PRKP1/8/8/2r5 w - - 4 36
+Best move (UCI): e6e8
+Best move (SAN): Re8+
+<|position-end|>
+<|position-start|>
+FEN: 4R3/5kp1/5p1p/6rP/3PRKP1/8/8/2r5 w - - 6 37
+Best move (UCI): e4e7
+Best move (SAN): R4e7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3r2k1/6p1/4q2p/1Q2R3/pP2p3/P6P/1P4P1/1K6 b - - 1 33
+Best move (UCI): d8d1
+Best move (SAN): Rd1+
+<|position-end|>
+<|position-start|>
+FEN: 6k1/6p1/4q2p/1Q2R3/pP2p3/P6P/1PK3P1/3r4 b - - 3 34
+Best move (UCI): e6b3
+Best move (SAN): Qb3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3q1r1k/r4p2/pn2pNpb/1pp1P3/3p1P2/P2B3R/1PPP2PP/R1B3K1 w - - 0 23
+Best move (UCI): h3h6
+Best move (SAN): Rxh6+
+<|position-end|>
+<|position-start|>
+FEN: 3q1r2/r4pk1/pn2pNpR/1pp1P3/3p1P2/P2B4/1PPP2PP/R1B3K1 w - - 1 24
+Best move (UCI): h6h7
+Best move (SAN): Rh7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r5k1/1p3ppp/4p3/1B1p4/1P1PP2n/2R2P1P/2Q1KP2/6q1 w - - 1 30
+Best move (UCI): c3c8
+Best move (SAN): Rc8+
+<|position-end|>
+<|position-start|>
+FEN: 2r3k1/1p3ppp/4p3/1B1p4/1P1PP2n/5P1P/2Q1KP2/6q1 w - - 0 31
+Best move (UCI): c2c8
+Best move (SAN): Qxc8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2Q5/7p/8/4p3/pB1n4/P5kP/1P2r3/2R3K1 b - - 0 44
+Best move (UCI): d4f3
+Best move (SAN): Nf3+
+<|position-end|>
+<|position-start|>
+FEN: 2Q5/7p/8/4p3/pB6/P4nkP/1P2r3/2R2K2 b - - 2 45
+Best move (UCI): e2f2
+Best move (SAN): Rf2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2kr4/pp1n2b1/2p3p1/5p2/3q1B1r/2pB1Q2/P1P2PP1/1RK1R3 w - - 0 21
+Best move (UCI): f3c6
+Best move (SAN): Qxc6+
+<|position-end|>
+<|position-start|>
+FEN: 2kr4/p2n2b1/2p3p1/5p2/3q1B1r/2pB4/P1P2PP1/1RK1R3 w - - 0 22
+Best move (UCI): d3a6
+Best move (SAN): Ba6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r1b3k1/6p1/p1p1pq2/6R1/1P3R1Q/2P5/P5PP/3r1B1K b - - 2 31
+Best move (UCI): d1f1
+Best move (SAN): Rxf1+
+<|position-end|>
+<|position-start|>
+FEN: r1b3k1/6p1/p1p1pq2/6R1/1P5Q/2P5/P5PP/5R1K b - - 0 32
+Best move (UCI): f6f1
+Best move (SAN): Qxf1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r6k/2p2ppp/8/3QpP1n/r2pP3/3P2PP/2qB3K/R2R4 w - - 2 30
+Best move (UCI): d5a8
+Best move (SAN): Qxa8+
+<|position-end|>
+<|position-start|>
+FEN: r6k/2p2ppp/8/4pP1n/3pP3/3P2PP/2qB3K/R2R4 w - - 0 31
+Best move (UCI): a1a8
+Best move (SAN): Rxa8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1r4k1/5p1p/4b1p1/pBr5/P2pNp2/3RbP2/6PK/4QR2 b - - 0 35
+Best move (UCI): c5h5
+Best move (SAN): Rh5+
+<|position-end|>
+<|position-start|>
+FEN: 1r4k1/5p1p/4b1p1/pB5r/P2pNp1Q/3RbP2/6PK/5R2 b - - 2 36
+Best move (UCI): h5h4
+Best move (SAN): Rxh4#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r5rk/pp6/2pR4/4p1q1/2P3b1/6P1/PP1Q2P1/5RK1 w - - 2 27
+Best move (UCI): d6h6
+Best move (SAN): Rh6+
+<|position-end|>
+<|position-start|>
+FEN: r5rk/pp6/2p4q/4p3/2P3b1/6P1/PP1Q2P1/5RK1 w - - 0 28
+Best move (UCI): d2h6
+Best move (SAN): Qxh6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2r3k1/1br2pp1/p3p2p/1p2P3/8/P7/1P1R1PPP/1B1R3K w - - 2 23
+Best move (UCI): d2d8
+Best move (SAN): Rd8+
+<|position-end|>
+<|position-start|>
+FEN: 3r2k1/1br2pp1/p3p2p/1p2P3/8/P7/1P3PPP/1B1R3K w - - 0 24
+Best move (UCI): d1d8
+Best move (SAN): Rxd8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2r1k2r/pp1n1ppp/3b2b1/1B1p4/6P1/2B1PN1P/PP1N1P2/2KR3R b k - 0 17
+Best move (UCI): c8c3
+Best move (SAN): Rxc3+
+<|position-end|>
+<|position-start|>
+FEN: 4k2r/pp1n1ppp/3b2b1/1B1p4/6P1/2P1PN1P/P2N1P2/2KR3R b k - 0 18
+Best move (UCI): d6a3
+Best move (SAN): Ba3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3R4/4pr1k/1p2b1pp/q3P3/2P1B3/6Q1/6PP/r2R3K b - - 2 38
+Best move (UCI): f7f1
+Best move (SAN): Rf1+
+<|position-end|>
+<|position-start|>
+FEN: 3R4/4p2k/1p2b1pp/q3P3/2P1B3/6Q1/6PP/r4R1K b - - 0 39
+Best move (UCI): a1f1
+Best move (SAN): Rxf1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2b2q1r/k7/7p/2P1N3/7B/5p2/P1P2PPK/1R6 w - - 0 27
+Best move (UCI): e5c6
+Best move (SAN): Nc6+
+<|position-end|>
+<|position-start|>
+FEN: 2b2q1r/8/k1N4p/2P5/7B/5p2/P1P2PPK/1R6 w - - 2 28
+Best move (UCI): b1b6
+Best move (SAN): Rb6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3r1rk1/ppp2pp1/2p1b3/5N1p/4PP2/3P4/PqP3PP/R2Q1RK1 w - - 1 17
+Best move (UCI): f5e7
+Best move (SAN): Ne7+
+<|position-end|>
+<|position-start|>
+FEN: 3r1r2/ppp1Nppk/2p1b3/7p/4PP2/3P4/PqP3PP/R2Q1RK1 w - - 3 18
+Best move (UCI): d1h5
+Best move (SAN): Qxh5#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r3n1k1/pppn2bp/3p2p1/3P4/2PQ4/2N2PNb/PP5P/R1B3KR b - - 0 17
+Best move (UCI): g7d4
+Best move (SAN): Bxd4+
+<|position-end|>
+<|position-start|>
+FEN: r3n1k1/pppn3p/3p2p1/3P4/2Pb4/2N1BPNb/PP5P/R5KR b - - 1 18
+Best move (UCI): d4e3
+Best move (SAN): Bxe3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r4rk1/1p2bppp/p2pb3/q7/4NBP1/7P/PPPQB3/1K1R3R b - - 0 17
+Best move (UCI): a5a2
+Best move (SAN): Qxa2+
+<|position-end|>
+<|position-start|>
+FEN: r4rk1/1p2bppp/p2pb3/8/4NBP1/7P/qPPQB3/2KR3R b - - 1 18
+Best move (UCI): a2a1
+Best move (SAN): Qa1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r4n1k/6pp/pq6/3p1R2/3Pn3/2P3B1/P1P3PP/5RK1 w - - 0 22
+Best move (UCI): f5f8
+Best move (SAN): Rxf8+
+<|position-end|>
+<|position-start|>
+FEN: 5r1k/6pp/pq6/3p4/3Pn3/2P3B1/P1P3PP/5RK1 w - - 0 23
+Best move (UCI): f1f8
+Best move (SAN): Rxf8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 6k1/6p1/2p3Np/6nP/8/6P1/p1r5/5R1K w - - 0 55
+Best move (UCI): f1f8
+Best move (SAN): Rf8+
+<|position-end|>
+<|position-start|>
+FEN: 5R2/6pk/2p3Np/6nP/8/6P1/p1r5/7K w - - 2 56
+Best move (UCI): f8h8
+Best move (SAN): Rh8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r3q1nQ/ppp1Pkp1/5p2/6p1/2p5/7P/PP3P1P/4R1K1 w - - 1 24
+Best move (UCI): h8h5
+Best move (SAN): Qh5+
+<|position-end|>
+<|position-start|>
+FEN: r3q1n1/ppp1Pk2/5pp1/6pQ/2p5/7P/PP3P1P/4R1K1 w - - 0 25
+Best move (UCI): h5h7
+Best move (SAN): Qh7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 7r/ppp3k1/4p2p/4P3/r2P3R/5R2/2PK2P1/8 w - - 0 38
+Best move (UCI): h4g4
+Best move (SAN): Rg4+
+<|position-end|>
+<|position-start|>
+FEN: 7r/ppp4k/4p2p/4P3/r2P2R1/5R2/2PK2P1/8 w - - 2 39
+Best move (UCI): f3f7
+Best move (SAN): Rf7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 5k2/pp3p2/4nN1p/2p1Pp2/5P2/P1P3R1/1r1r2PP/5RK1 w - - 6 25
+Best move (UCI): g3g8
+Best move (SAN): Rg8+
+<|position-end|>
+<|position-start|>
+FEN: 6R1/pp2kp2/4nN1p/2p1Pp2/5P2/P1P5/1r1r2PP/5RK1 w - - 8 26
+Best move (UCI): g8e8
+Best move (SAN): Re8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: R4R2/5p1k/5r2/3K3P/8/8/6p1/4r3 w - - 0 57
+Best move (UCI): f8h8
+Best move (SAN): Rh8+
+<|position-end|>
+<|position-start|>
+FEN: R6R/5pk1/5r2/3K3P/8/8/6p1/4r3 w - - 2 58
+Best move (UCI): a8g8
+Best move (SAN): Rag8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/pr5p/3R4/1r2kN2/6P1/5PK1/8/8 w - - 2 50
+Best move (UCI): f3f4
+Best move (SAN): f4+
+<|position-end|>
+<|position-start|>
+FEN: 8/pr5p/3R4/1r3N2/4kPP1/6K1/8/8 w - - 1 51
+Best move (UCI): d6d4
+Best move (SAN): Rd4#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/6kp/pQ1P2p1/2r1p3/6b1/8/PP6/1K6 b - - 0 35
+Best move (UCI): g4f5
+Best move (SAN): Bf5+
+<|position-end|>
+<|position-start|>
+FEN: 8/6kp/pQ1P2p1/2r1pb2/8/8/PP6/K7 b - - 2 36
+Best move (UCI): c5c1
+Best move (SAN): Rc1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1k2r3/1r1nq2p/p5p1/Q4p2/2R2P2/P7/2P3PP/1R4K1 w - - 10 36
+Best move (UCI): a5c7
+Best move (SAN): Qc7+
+<|position-end|>
+<|position-start|>
+FEN: k3r3/1rQnq2p/p5p1/5p2/2R2P2/P7/2P3PP/1R4K1 w - - 12 37
+Best move (UCI): c7b7
+Best move (SAN): Qxb7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 4rkr1/1pp2pqQ/8/pPP5/2B5/P7/6PP/5R1K w - - 2 35
+Best move (UCI): f1f7
+Best move (SAN): Rxf7+
+<|position-end|>
+<|position-start|>
+FEN: 4rkr1/1pp2q1Q/8/pPP5/2B5/P7/6PP/7K w - - 0 36
+Best move (UCI): h7f7
+Best move (SAN): Qxf7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 4N1rk/p2b1p2/1p1p2qp/3P1B2/2P5/5N1n/PPQ2PrP/4RR1K b - - 0 24
+Best move (UCI): g2h2
+Best move (SAN): Rxh2+
+<|position-end|>
+<|position-start|>
+FEN: 4N1rk/p2b1p2/1p1p2qp/3P1B2/2P5/7n/PPQ2P1N/4RR1K b - - 0 25
+Best move (UCI): g6g2
+Best move (SAN): Qg2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/1b1k4/7Q/p1n5/2PBPP2/6r1/P6P/R4R1K b - - 0 37
+Best move (UCI): b7e4
+Best move (SAN): Bxe4+
+<|position-end|>
+<|position-start|>
+FEN: 8/3k4/7Q/p1n5/2PBbP2/5Rr1/P6P/R6K b - - 1 38
+Best move (UCI): e4f3
+Best move (SAN): Bxf3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 7r/3b2b1/R1NBk1nq/2Pp1p2/3Pp1p1/2N1PnP1/4Q2R/5B1K b - - 0 40
+Best move (UCI): h6h2
+Best move (SAN): Qxh2+
+<|position-end|>
+<|position-start|>
+FEN: 7r/3b2b1/R1NBk1n1/2Pp1p2/3Pp1p1/2N1PnP1/7Q/5B1K b - - 0 41
+Best move (UCI): h8h2
+Best move (SAN): Rxh2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3kr3/8/3p2Q1/p7/P2P2pp/2PBq3/2K5/8 w - - 3 47
+Best move (UCI): g6d6
+Best move (SAN): Qxd6+
+<|position-end|>
+<|position-start|>
+FEN: 2k1r3/8/3Q4/p7/P2P2pp/2PBq3/2K5/8 w - - 1 48
+Best move (UCI): d3a6
+Best move (SAN): Ba6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1q3rk1/6n1/1pb1pP2/2p2PQ1/2P3P1/1p6/1B1R4/5RK1 b - - 0 30
+Best move (UCI): b8g3
+Best move (SAN): Qg3+
+<|position-end|>
+<|position-start|>
+FEN: 5rk1/6n1/1pb1pP2/2p2PQ1/2P3P1/1p4q1/1B4R1/5RK1 b - - 2 31
+Best move (UCI): g3g2
+Best move (SAN): Qxg2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/8/2p5/1p3b1B/1Pk3p1/2P3P1/3K4/8 w - - 3 47
+Best move (UCI): h5f7
+Best move (SAN): Bf7+
+<|position-end|>
+<|position-start|>
+FEN: 8/5B2/2p1b3/1p6/1Pk3p1/2P3P1/3K4/8 w - - 5 48
+Best move (UCI): f7e6
+Best move (SAN): Bxe6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 4r3/1p3k1p/p2Br1p1/3N4/P2Q4/8/1P3PPP/3R2K1 b - - 0 30
+Best move (UCI): e6e1
+Best move (SAN): Re1+
+<|position-end|>
+<|position-start|>
+FEN: 4r3/1p3k1p/p2B2p1/3N4/P2Q4/8/1P3PPP/4R1K1 b - - 0 31
+Best move (UCI): e8e1
+Best move (SAN): Rxe1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 4r1k1/pppb1p1p/6pB/6P1/nP3R2/P2P4/B1P2P1P/5K2 b - - 2 30
+Best move (UCI): d7h3
+Best move (SAN): Bh3+
+<|position-end|>
+<|position-start|>
+FEN: 4r1k1/ppp2p1p/6pB/6P1/nP3R2/P2P3b/B1P2P1P/6K1 b - - 4 31
+Best move (UCI): e8e1
+Best move (SAN): Re1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 6k1/pp4p1/4q1Np/3pP2P/3r4/8/PP4P1/5RK1 w - - 0 34
+Best move (UCI): f1f8
+Best move (SAN): Rf8+
+<|position-end|>
+<|position-start|>
+FEN: 5R2/pp4pk/4q1Np/3pP2P/3r4/8/PP4P1/6K1 w - - 2 35
+Best move (UCI): f8h8
+Best move (SAN): Rh8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 6k1/1pp1pr1p/6pq/4R3/Q2N4/2P4n/PP3P2/R4K2 b - - 2 31
+Best move (UCI): f7f2
+Best move (SAN): Rxf2+
+<|position-end|>
+<|position-start|>
+FEN: 6k1/1pp1p2p/6pq/4R3/Q2N4/2P4n/PP3r2/R3K3 b - - 1 32
+Best move (UCI): h6d2
+Best move (SAN): Qd2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/3p1p1k/6pp/pp1p4/3Q3P/1P6/P1r1q3/K2R1R2 b - - 9 34
+Best move (UCI): c2a2
+Best move (SAN): Rxa2+
+<|position-end|>
+<|position-start|>
+FEN: 8/3p1p1k/6pp/pp1p4/3Q3P/1P6/r3q3/1K1R1R2 b - - 1 35
+Best move (UCI): e2c2
+Best move (SAN): Qc2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 7k/2p3qp/5R1Q/1p2p3/8/8/2P2KPP/1r6 w - - 3 34
+Best move (UCI): f6f8
+Best move (SAN): Rf8+
+<|position-end|>
+<|position-start|>
+FEN: 5q1k/2p4p/7Q/1p2p3/8/8/2P2KPP/1r6 w - - 0 35
+Best move (UCI): h6f8
+Best move (SAN): Qxf8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 6k1/p1R2pp1/1p1r3p/1P1b4/4BP2/8/P5PP/6K1 w - - 0 30
+Best move (UCI): c7c8
+Best move (SAN): Rc8+
+<|position-end|>
+<|position-start|>
+FEN: 2Rr2k1/p4pp1/1p5p/1P1b4/4BP2/8/P5PP/6K1 w - - 2 31
+Best move (UCI): c8d8
+Best move (SAN): Rxd8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 5r1k/pp5p/5qp1/2P5/3p4/P1n2P2/2QB1P1P/R4RK1 b - - 0 24
+Best move (UCI): c3e2
+Best move (SAN): Ne2+
+<|position-end|>
+<|position-start|>
+FEN: 5r1k/pp5p/5qp1/2P5/3p4/P4P2/2QBnP1P/R4R1K b - - 2 25
+Best move (UCI): f6f3
+Best move (SAN): Qxf3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2kr3r/pp1nbpp1/2p1p1b1/5qNp/3P1B1Q/P6P/1P2BPP1/2R2RK1 w - - 1 21
+Best move (UCI): c1c6
+Best move (SAN): Rxc6+
+<|position-end|>
+<|position-start|>
+FEN: 2kr3r/p2nbpp1/2p1p1b1/5qNp/3P1B1Q/P6P/1P2BPP1/5RK1 w - - 0 22
+Best move (UCI): e2a6
+Best move (SAN): Ba6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r2r2k1/3p3n/3Np2Q/pp2Pp2/3q3P/3P1b1P/PP1K4/2R5 w - - 1 26
+Best move (UCI): h6g6
+Best move (SAN): Qg6+
+<|position-end|>
+<|position-start|>
+FEN: r2r3k/3p3n/3Np1Q1/pp2Pp2/3q3P/3P1b1P/PP1K4/2R5 w - - 3 27
+Best move (UCI): d6f7
+Best move (SAN): Nf7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3R1r1k/1pp2rpp/1p6/8/8/8/PP4P1/5RK1 w - - 0 32
+Best move (UCI): d8f8
+Best move (SAN): Rxf8+
+<|position-end|>
+<|position-start|>
+FEN: 5r1k/1pp3pp/1p6/8/8/8/PP4P1/5RK1 w - - 0 33
+Best move (UCI): f1f8
+Best move (SAN): Rxf8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2r2rk1/3bq1bR/p3p1P1/3p4/3Q2P1/2p1P3/PP3P2/2K4R w - - 0 26
+Best move (UCI): h7h8
+Best move (SAN): Rh8+
+<|position-end|>
+<|position-start|>
+FEN: 2r2rkb/3bq3/p3p1P1/3p4/3Q2P1/2p1P3/PP3P2/2K4R w - - 0 27
+Best move (UCI): d4h8
+Best move (SAN): Qxh8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 4r1k1/5rpp/p1Q5/1p1P4/8/PP6/5RPP/6K1 b - - 0 30
+Best move (UCI): e8e1
+Best move (SAN): Re1+
+<|position-end|>
+<|position-start|>
+FEN: 6k1/5rpp/p1Q5/1p1P4/8/PP6/6PP/4rRK1 b - - 2 31
+Best move (UCI): e1f1
+Best move (SAN): Rexf1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1r6/4R3/4p3/3p2pk/KPbP4/P7/6BP/8 b - - 1 39
+Best move (UCI): b8a8
+Best move (SAN): Ra8+
+<|position-end|>
+<|position-start|>
+FEN: r7/R7/4p3/3p2pk/KPbP4/P7/6BP/8 b - - 3 40
+Best move (UCI): a8a7
+Best move (SAN): Rxa7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1k2r3/pp2q1p1/2pb2Bp/8/3P4/5Q1P/PPP2PP1/R5K1 b - - 4 20
+Best move (UCI): e7e1
+Best move (SAN): Qe1+
+<|position-end|>
+<|position-start|>
+FEN: 1k2r3/pp4p1/2pb2Bp/8/3P4/5Q1P/PPP2PP1/4R1K1 b - - 0 21
+Best move (UCI): e8e1
+Best move (SAN): Rxe1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r4k1N/ppp2Bp1/3p1n1p/8/4Pq2/7K/PP2nPP1/R2QNR2 b - - 0 18
+Best move (UCI): f4g4
+Best move (SAN): Qg4+
+<|position-end|>
+<|position-start|>
+FEN: r4k1N/ppp2Bp1/3p1n1p/8/4P1q1/8/PP2nPPK/R2QNR2 b - - 2 19
+Best move (UCI): g4h4
+Best move (SAN): Qh4#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: rnb4k/pp2bB1p/2pp2p1/8/8/2NPB1P1/PPP1K3/R7 w - - 0 16
+Best move (UCI): e3d4
+Best move (SAN): Bd4+
+<|position-end|>
+<|position-start|>
+FEN: rnb4k/pp3B1p/2pp1bp1/8/3B4/2NP2P1/PPP1K3/R7 w - - 2 17
+Best move (UCI): d4f6
+Best move (SAN): Bxf6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r1b3k1/pp2ppbp/6BB/8/q7/5Q2/5PPP/3r1RK1 w - - 0 19
+Best move (UCI): f3f7
+Best move (SAN): Qxf7+
+<|position-end|>
+<|position-start|>
+FEN: r1b4k/pp2pQbp/6BB/8/q7/8/5PPP/3r1RK1 w - - 1 20
+Best move (UCI): f7g7
+Best move (SAN): Qxg7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 5r1k/2p1N2p/ppQp4/6p1/P1q5/4K3/1PP1n1PP/R3R3 b - - 2 28
+Best move (UCI): c4d4
+Best move (SAN): Qd4+
+<|position-end|>
+<|position-start|>
+FEN: 5r1k/2p1N2p/ppQp4/6p1/P2q4/8/1PP1K1PP/R3R3 b - - 0 29
+Best move (UCI): f8f2
+Best move (SAN): Rf2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: rn2kb1r/pp3pp1/2p1pn1p/8/7q/1BNR4/PPP2PP1/R1BQK3 w Qkq - 0 12
+Best move (UCI): d3d8
+Best move (SAN): Rd8+
+<|position-end|>
+<|position-start|>
+FEN: rn1R1b1r/pp2kpp1/2p1pn1p/8/7q/1BN5/PPP2PP1/R1BQK3 w Q - 2 13
+Best move (UCI): d1d6
+Best move (SAN): Qd6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 4Q3/8/4Rp1p/2k5/2q2bP1/8/8/3K4 b - - 14 71
+Best move (UCI): c4d3
+Best move (SAN): Qd3+
+<|position-end|>
+<|position-start|>
+FEN: 4Q3/8/4Rp1p/2k5/5bP1/3q4/8/4K3 b - - 16 72
+Best move (UCI): f4g3
+Best move (SAN): Bg3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3q2rk/5prn/p2pbQ1R/1pp5/4PR2/N1PP4/PP4PP/6K1 w - - 7 28
+Best move (UCI): h6h7
+Best move (SAN): Rxh7+
+<|position-end|>
+<|position-start|>
+FEN: 3q2r1/5prk/p2pbQ2/1pp5/4PR2/N1PP4/PP4PP/6K1 w - - 0 29
+Best move (UCI): f4h4
+Best move (SAN): Rh4#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3r3r/R2p4/2k1p1n1/1pP1Pp2/3P2p1/7p/3N1PbP/R5K1 w - - 4 30
+Best move (UCI): a1a6
+Best move (SAN): R1a6+
+<|position-end|>
+<|position-start|>
+FEN: 3r3r/R2p4/R3p1n1/1pPkPp2/3P2p1/7p/3N1PbP/6K1 w - - 6 31
+Best move (UCI): a6d6
+Best move (SAN): Rd6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2Rn2r1/8/1p6/1k2pN1p/p3P2P/2P2KP1/8/8 w - - 0 43
+Best move (UCI): f5d6
+Best move (SAN): Nd6+
+<|position-end|>
+<|position-start|>
+FEN: 2Rn2r1/8/kp1N4/4p2p/p3P2P/2P2KP1/8/8 w - - 2 44
+Best move (UCI): c8a8
+Best move (SAN): Ra8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2Rr2k1/p4p1p/6p1/3q1r2/4Rp2/1PQ5/P2p2PP/6K1 w - - 0 33
+Best move (UCI): e4e8
+Best move (SAN): Re8+
+<|position-end|>
+<|position-start|>
+FEN: 2R1r1k1/p4p1p/6p1/3q1r2/5p2/1PQ5/P2p2PP/6K1 w - - 0 34
+Best move (UCI): c8e8
+Best move (SAN): Rxe8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r7/4R2R/2p3k1/5p2/5P1P/1r6/p4K2/8 w - - 0 37
+Best move (UCI): h4h5
+Best move (SAN): h5+
+<|position-end|>
+<|position-start|>
+FEN: r7/4R2R/2p2k2/5p1P/5P2/1r6/p4K2/8 w - - 1 38
+Best move (UCI): h7f7
+Best move (SAN): Rhf7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 6k1/p1p3pp/1p1p3r/2P2p2/1P2b2q/4P1P1/P4R1P/2Q2RK1 b - - 0 27
+Best move (UCI): h4g3
+Best move (SAN): Qxg3+
+<|position-end|>
+<|position-start|>
+FEN: 6k1/p1p3pp/1p1p3r/2P2p2/1P2b3/4P1P1/P4R2/2Q2RK1 b - - 0 28
+Best move (UCI): h6h1
+Best move (SAN): Rh1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2k5/pp1n1Npp/2p2B2/2b2p2/2B5/2NQ4/PPP2qPP/4rR1K b - - 0 18
+Best move (UCI): f2g1
+Best move (SAN): Qg1+
+<|position-end|>
+<|position-start|>
+FEN: 2k5/pp1n1Npp/2p2B2/2b2p2/2B5/2NQ4/PPP3PP/4r1RK b - - 0 19
+Best move (UCI): e1g1
+Best move (SAN): Rxg1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 6k1/pp3pp1/2p4p/3p4/3P4/2PBr2P/PPQN2Pq/5K2 b - - 0 24
+Best move (UCI): h2h1
+Best move (SAN): Qh1+
+<|position-end|>
+<|position-start|>
+FEN: 6k1/pp3pp1/2p4p/3p4/3P4/2PBr2P/PPQN1KP1/7q b - - 2 25
+Best move (UCI): h1e1
+Best move (SAN): Qe1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 7r/p2k1B2/3p1p2/2pP4/2P3p1/3q2P1/4RP2/R1Q2K2 b - - 6 36
+Best move (UCI): h8h1
+Best move (SAN): Rh1+
+<|position-end|>
+<|position-start|>
+FEN: 8/p2k1B2/3p1p2/2pP4/2P3p1/3q2P1/4RPK1/R1Q4r b - - 8 37
+Best move (UCI): d3f3
+Best move (SAN): Qf3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 5k2/4pp2/2bp2p1/2p5/p3r1q1/2P2R2/P1PQ1KP1/7R w - - 0 30
+Best move (UCI): h1h8
+Best move (SAN): Rh8+
+<|position-end|>
+<|position-start|>
+FEN: 7R/4ppk1/2bp2p1/2p5/p3r1q1/2P2R2/P1PQ1KP1/8 w - - 2 31
+Best move (UCI): d2h6
+Best move (SAN): Qh6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r1bqr1k1/pp2bppn/2n1p3/3p2N1/2pP3P/2P1P3/PP1N1P2/RQ2K2R w KQ - 0 16
+Best move (UCI): b1h7
+Best move (SAN): Qxh7+
+<|position-end|>
+<|position-start|>
+FEN: r1bqrk2/pp2bppQ/2n1p3/3p2N1/2pP3P/2P1P3/PP1N1P2/R3K2R w KQ - 1 17
+Best move (UCI): h7h8
+Best move (SAN): Qh8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 6r1/ppp5/4NB2/n2p1b2/8/2P4k/P6P/R4R1K b - - 1 31
+Best move (UCI): f5e4
+Best move (SAN): Be4+
+<|position-end|>
+<|position-start|>
+FEN: 6r1/ppp5/4NB2/n2p4/4b3/2P2R1k/P6P/R6K b - - 3 32
+Best move (UCI): e4f3
+Best move (SAN): Bxf3#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r4r1k/p1p1bB1p/1p6/3P1p2/8/2P1B2P/P1P4P/1R4K1 w - - 0 27
+Best move (UCI): e3d4
+Best move (SAN): Bd4+
+<|position-end|>
+<|position-start|>
+FEN: r4r1k/p1p2B1p/1p3b2/3P1p2/3B4/2P4P/P1P4P/1R4K1 w - - 2 28
+Best move (UCI): d4f6
+Best move (SAN): Bxf6#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r4rk1/pp1bppb1/1q5p/4p1pP/3pNnP1/2PQ1P2/PPB5/RN2K2R w KQ - 2 22
+Best move (UCI): e4f6
+Best move (SAN): Nf6+
+<|position-end|>
+<|position-start|>
+FEN: r4rk1/pp1bppb1/5q1p/4p1pP/3p1nP1/2PQ1P2/PPB5/RN2K2R w KQ - 0 23
+Best move (UCI): d3h7
+Best move (SAN): Qh7#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1R6/1P2p1kp/p5p1/8/3bn3/4q3/P3B1PP/3Q1R1K b - - 0 33
+Best move (UCI): e3g1
+Best move (SAN): Qg1+
+<|position-end|>
+<|position-start|>
+FEN: 1R6/1P2p1kp/p5p1/8/3bn3/8/P3B1PP/3Q2RK b - - 0 34
+Best move (UCI): e4f2
+Best move (SAN): Nf2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r1b5/pp3rpk/4p2P/3pp3/3P4/4P1Q1/q5P1/1N2K2R w K - 0 21
+Best move (UCI): h6g7
+Best move (SAN): hxg7+
+<|position-end|>
+<|position-start|>
+FEN: r1b3k1/pp3rP1/4p3/3pp3/3P4/4P1Q1/q5P1/1N2K2R w K - 1 22
+Best move (UCI): h1h8
+Best move (SAN): Rh8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: rk3b1r/1p4p1/p1p2p1p/2P1Nb1P/4p3/1q2P1B1/PP3PP1/2KR3R w - - 0 21
+Best move (UCI): e5c6
+Best move (SAN): Nxc6+
+<|position-end|>
+<|position-start|>
+FEN: r1k2b1r/1p4p1/p1N2p1p/2P2b1P/4p3/1q2P1B1/PP3PP1/2KR3R w - - 1 22
+Best move (UCI): d1d8
+Best move (SAN): Rd8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 8/R4pk1/1p2p3/3p2pB/1P6/P7/r4PPP/6K1 b - - 0 28
+Best move (UCI): a2a1
+Best move (SAN): Ra1+
+<|position-end|>
+<|position-start|>
+FEN: 8/R4pk1/1p2p3/3p2p1/1P6/P7/5PPP/r2B2K1 b - - 2 29
+Best move (UCI): a1d1
+Best move (SAN): Rxd1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2Q5/p4q1k/1p6/3pP3/P3p1p1/4P1Pp/5P1P/7K b - - 0 35
+Best move (UCI): f7f3
+Best move (SAN): Qf3+
+<|position-end|>
+<|position-start|>
+FEN: 2Q5/p6k/1p6/3pP3/P3p1p1/4PqPp/5P1P/6K1 b - - 2 36
+Best move (UCI): f3d1
+Best move (SAN): Qd1#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: rn4Q1/pp5p/2p3pk/8/4pr1q/1B1PN1N1/PPP2bPP/R1B4K b - - 0 19
+Best move (UCI): h4h2
+Best move (SAN): Qxh2+
+<|position-end|>
+<|position-start|>
+FEN: rn4Q1/pp5p/2p3pk/8/4pr2/1B1PN1N1/PPP2bPK/R1B5 b - - 0 20
+Best move (UCI): f4h4
+Best move (SAN): Rh4#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 2Qqkr2/6p1/p7/1p2p1nr/3p3P/1B6/PP4P1/5RK1 w - - 0 29
+Best move (UCI): f1f8
+Best move (SAN): Rxf8+
+<|position-end|>
+<|position-start|>
+FEN: 2Qq1k2/6p1/p7/1p2p1nr/3p3P/1B6/PP4P1/6K1 w - - 0 30
+Best move (UCI): c8d8
+Best move (SAN): Qxd8#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r4r2/q1p2kb1/1p1p4/1PnPp1pp/PK2Pp2/1PQ2P1P/4B1PN/2R4R b - - 4 35
+Best move (UCI): a7a4
+Best move (SAN): Qxa4+
+<|position-end|>
+<|position-start|>
+FEN: r4r2/2p2kb1/1p1p4/1PnPp1pp/PK2Pp2/2Q2P1P/4B1PN/2R4R b - - 0 36
+Best move (UCI): a8a4
+Best move (SAN): Rxa4#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 3R4/5Bp1/1pp2p1k/2b2P1p/8/p5PK/5r1P/8 w - - 0 33
+Best move (UCI): d8h8
+Best move (SAN): Rh8+
+<|position-end|>
+<|position-start|>
+FEN: 7R/5Bp1/1pp2p2/2b2Pkp/8/p5PK/5r1P/8 w - - 2 34
+Best move (UCI): h8h5
+Best move (SAN): Rxh5#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 1Q6/3rkp1p/6p1/p3B3/P2P4/2q4P/5PPK/8 w - - 2 35
+Best move (UCI): e5f6
+Best move (SAN): Bf6+
+<|position-end|>
+<|position-start|>
+FEN: 1Q6/3r1p1p/5kp1/p7/P2P4/2q4P/5PPK/8 w - - 0 36
+Best move (UCI): b8e5
+Best move (SAN): Qe5#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r4r1k/pp2Nppp/1b1pb3/3R4/7Q/7P/qP3PP1/3R2K1 w - - 0 26
+Best move (UCI): h4h7
+Best move (SAN): Qxh7+
+<|position-end|>
+<|position-start|>
+FEN: r4r2/pp2Nppk/1b1pb3/3R4/8/7P/qP3PP1/3R2K1 w - - 0 27
+Best move (UCI): d5h5
+Best move (SAN): Rh5#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: r6r/p1R3pp/4p3/P3Q3/3P4/1pPk4/1P4qP/R3K3 w Q - 6 25
+Best move (UCI): e1c1
+Best move (SAN): O-O-O+
+<|position-end|>
+<|position-start|>
+FEN: r6r/p1R3pp/4p3/P3Q3/3P4/1pPk4/1P1q3P/2KR4 w - - 8 26
+Best move (UCI): d1d2
+Best move (SAN): Rxd2#
+<|position-end|>
+<|puzzle-end|>
+<|puzzle-start|>
+<|position-start|>
+FEN: 7r/ppbkn1p1/2p1p3/2P5/1P1P2P1/3QBP2/P6r/1R2R1K1 b - - 0 29
+Best move (UCI): h2h1
+Best move (SAN): Rh1+
+<|position-end|>
+<|position-start|>
+FEN: 7r/ppbkn1p1/2p1p3/2P5/1P1P2P1/3QBP2/P5K1/1R2R2r b - - 2 30
+Best move (UCI): h8h2
+Best move (SAN): R8h2#
+<|position-end|>
+<|puzzle-end|>
