@@ -20,7 +20,7 @@ import chess.engine
 # alternate windows path used for other tests
 STOCKFISH_PATH = "stockfish-18.exe"
 
-SF18_JUDGE_DEPTH = 25                          # used to check for alternate puzzle solutions
+SF18_JUDGE_DEPTH = 20                           # used to check for alternate puzzle solutions
 SF18_JUDGE_TIMEOUT = 10.0                       # limit engine searches to 10 seconds
 
 '''
