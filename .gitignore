@@ -1,9 +1,0 @@
-.env
-package*
-__pycache__*
-*.exe
-*.csv
-*.txt
-*.pt
-*.pkl
-/the-big-fish

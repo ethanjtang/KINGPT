@@ -1,2 +1,0 @@
-FEN: 2rk4/pR2R3/6pp/1p4r1/1Pp1P3/5P2/P4K2/2q5 w - - 6 43
-Best move: 

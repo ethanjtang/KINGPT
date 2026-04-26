@@ -1,7 +1,0 @@
-# Caissa v.0
-
-All 3 .pt files for each Caissa model at a specific checkpoint (500k, 1m, 1.5m iterations) are included here.
-meta_final.pkl contains the vocabulary for all 3 Caissa checkpoints.
-data.txt includes the training data used for all Caissa checkpoints with 12m+ position + best move pairs
-
-LINK: https://drive.google.com/drive/folders/13DY9oL6wFiaTFZOyEtQ9HP77xfcGFZaJ?usp=sharing
