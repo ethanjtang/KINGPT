@@ -1,7 +1,7 @@
 
 # KINGPT
 
-Chess-based SLMs trained exclusively on position (FEN) + best move (UCI) pairs without move history context. A baseline for comparison onagainst any claims of LLM "mastery" or "understanding" of chess.
+Chess-based SLM trained exclusively on position (FEN) + best move (UCI) pairs without move history context. A baseline for comparison onagainst any claims of LLM "mastery" or "understanding" of chess.
 
 Forked from [karpathy/nanoGPT](https://github.com/karpathy/nanogpt)
 
