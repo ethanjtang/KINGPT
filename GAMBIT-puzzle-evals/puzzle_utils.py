@@ -1,3 +1,5 @@
+# THIS FILE IS BASICALLY IDENTICAL TO THE ONE IN https://github.com/ethanjtang/GAMBIT
+
 """
 Util file containing several functions useful for evaluating LLMs on puzzle positions from the evaluation set
 of puzzles I extracted from the Lichess Puzzle Database.

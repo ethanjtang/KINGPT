@@ -1,6 +1,6 @@
 """
 This program tests different KINGPT checkpoints on a sample of mate-in-X puzzles.
-It is identical to eval_all_models.py except for KINGPT inference.
+It is identical to eval_all_models.py in my GAMBIT repo (https://github.com/ethanjtang/GAMBIT) except for KINGPT inference.
 Since KINGPT was trained using a fork of karpathy's nanoGPT repository (https://github.com/karpathy/nanoGPT).
 
 A move is treated as correct if it matches the best move recorded OR
@@ -27,21 +27,16 @@ import pickle # KINGPT vocab file
 from contextlib import nullcontext # for torch device setup
 from model import GPTConfig, GPT  # KINGPT tokenizer
 
-from transformers import AutoTokenizer, AutoModelForCausalLM, LlamaTokenizer, LlamaForCausalLM
-# we don't need these for KINGPT evals ^^^
-
 from puzzle_utils import sample_puzzles, get_engine, check_position_accuracy
 
 # constants
 PUZZLES_DIR = 'puzzles' # for full puzzle sets
 SAMPLE_DIR = 'samples'  # save sample of N puzzles for reuse/testing different models
-N_PUZZLES = 1         # number of puzzles to test on for each theme
+N_PUZZLES = 100         # number of puzzles to test on for each theme
 SF18_DEPTH = 20         # depth for Stockfish variants (besides the ground truth)
 SF18_TIMEOUT = 10.0     # 10s timeout for Stockfish variants 
 
 META_PATH = 'kingpt-models/meta.pkl'  # shared vocab file for all KINGPT checkpoints
-
-OFFLOAD_DIR = 'this-should-never-be-created' # unused in this script
 
 # ============================
 # CONFIG
@@ -49,38 +44,23 @@ OFFLOAD_DIR = 'this-should-never-be-created' # unused in this script
 
 # dict to associate puzzle theme with (filepath, mate_depth) pairs
 # filepath for filepath (duh)
-# mate_depth as an arg to build "cheating" prompts - where LLM is provided information that it is mate-in-X
-# since "ChessGPT" by Feng in 2023 showcases increased performance using this method
+# UNUSED: mate_depth as an arg to build "cheating" prompts
 PUZZLE_FILES = {
     'mateIn1': (os.path.join(PUZZLES_DIR, 'validation_puzzles_mateIn1.txt'), 1),
     'mateIn2': (os.path.join(PUZZLES_DIR, 'validation_puzzles_mateIn2.txt'), 2),
     'mateIn3': (os.path.join(PUZZLES_DIR, 'validation_puzzles_mateIn3.txt'), 3),
-    # 'mateIn4': (os.path.join(PUZZLES_DIR, 'validation_puzzles_mateIn4.txt'), 4),
 }
-
-# List of Stockfish configs
-# Skill Levels 0-3 are roughly equivalent to 1347, 1444, 1566, 1729 Elo respectively
-SF_MODELS = {
-    'SF18 depth=25 (ground truth)':       {'skill': None, 'depth': 25},
-    # 'SF18 Skill Level 0':                 {'skill': 0,    'depth': SF18_DEPTH},
-    # 'SF18 Skill Level 1':                 {'skill': 1,    'depth': SF18_DEPTH},
-    # 'SF18 Skill Level 2':                 {'skill': 2,    'depth': SF18_DEPTH},
-    # 'SF18 Skill Level 3':                 {'skill': 3,    'depth': SF18_DEPTH},
-}
-
-# not needed for this script
-LLM_MODELS = []
 
 # List of KINGPT checkpoints (trained by yours truly)
 # Maps display name -> path to checkpoint file (.pt)
 # All checkpoints share the same META_PATH as their vocab file
 KINGPT_MODELS = {
     'kingpt-puzzles-1m': 'kingpt-models/kingpt_puzzles-only_1m-iters.pt',
-    'kingpt-selfplay-500k': 'kingpt-models/kingpt_sf-selfplay-only_500k-iters.pt',
-    # Note that the selfplay model was trained only for 500k iters
-    # since 1k selfplay games gives a lot less unique positions than 12m puzzles
-    # 'kingpt-combined-1m': 'kingpt-models/kingpt_combined_1m-iters.pt',
-    # uses combined dataset of puzzle and selfplay position + best move pairs
+    'kingpt-selfplay-50k': 'kingpt-models/kingpt_sf-selfplay-only_50k-iters.pt',
+    'kingpt-selfplay-500k': 'kingpt-models/kingpt_sf-selfplay-only_500k-iters.pt', # testing a really overfitted version for fun
+    'kingpt-combined-1m': 'kingpt-models/kingpt_sf-selfplay-only_500k-iters.pt',
+    # Note that the selfplay model was trained only for 50k iters due to val loss converging much quicker
+    # due to 1k selfplay games giving a lot less unique positions than 12m puzzles
 }
 
 # ============================
@@ -143,134 +123,6 @@ def fetch_puzzle_sample() -> dict:
     return puzzles_by_theme
 
 # ============================
-# LLM MOVE PARSING
-# ============================
-
-'''
-Helper function which attempts to parse a valid UCI or SAN format move from LLM output.
-Takes the first, leftmost match, with UCI format matches having priority over SAN matches.
-
-Takes as input:
-text - LLM output
-board - current chess board for LLM-generated move
-Returns None if no legal move is able to be parsed from the current board state.
-'''
-def parse_move(text: str, board: chess.Board) -> str | None:
-
-    # get all words from LLM response
-    words = text.split()
-
-    # parse all possible substrings which could contain valid chess moves
-    substrings = [
-        ' '.join(words[i:j])
-        for i in range(len(words))
-        for j in range(i + 1, len(words) + 1)
-    ]
-
-    # For each candidate move in the list of substrings...
-    for candidate in substrings:
-        # I will claim the Royal Sceptre and ...
-        
-        # Attempt to parse a UCI move
-        try:
-            move = chess.Move.from_uci(candidate.lower())
-            if move in board.legal_moves:
-                return candidate.lower()
-        except ValueError:
-            pass
-    
-    # If no valid UCI move was parsed..
-    # For each candidate move in the list of substrings...
-    for candidate in substrings:
-        try:
-            # Attempt to parse a SAN move
-            move = board.parse_san(candidate)
-            # If one is parsed, convert it to UCI
-            # SAN is a really horrible format for everyone involved (even humans!)
-            if move in board.legal_moves:
-                return move.uci()
-        except (ValueError, chess.IllegalMoveError, chess.InvalidMoveError, chess.AmbiguousMoveError):
-            pass
-
-    return None
-
-
-# ============================
-# LLM PROMPTS AND INFERENCE
-# ============================
-
-'''
-This helper function builds a normal prompt to test a LLM on a given puzzle position.
-FEN - puzzle position
-
-Returns the full prompt as a string.
-'''
-def build_prompt(fen: str) -> str:
-    # return regular prompt
-    return (
-        "You are a chess engine. Given the following board position in FEN notation, "
-        "provide the single best move in UCI format.\n"
-        f"FEN: {fen}\n"
-        "Best move:"
-    )
-
-'''
-This helper function builds a "cheating" variant of a prompt to test a LLM on a given puzzle position.
-FEN - puzzle position
-mate_in - current evaluation of the FEN (position)
-
-Returns the full prompt as a string.
-'''
-def build_prompt_cheating(fen: str, mate_in: int) -> str:
-
-    # get the side to move
-    board = chess.Board(fen)
-    side = "White" if board.turn else "Black"
-
-    # return cheating prompt
-    return (
-        "Given the following board position in FEN notation, "
-        "provide the single best move in UCI format.\n"
-        f"{side} to mate in {mate_in}. "
-        f"FEN: {fen}\n"
-        "Best move:"
-    )
-
-'''
-This helper function generates a LLM response to a puzzle position prompt.
-model - LLM
-tokenizer - LLM tokenizer
-prompt - puzzle prompt
-device - method of inference
-
-Returns the LLM response as a string.
-'''
-def generate_response(model, tokenizer, prompt: str, device: str) -> str:
-    
-    # tokenize prompt
-    enc = tokenizer(prompt, return_tensors="pt")
-
-    # load prompt onto GPU
-    input_ids = enc.input_ids.to(device)
-    attention_mask = enc.attention_mask.to(device)
-
-    # get LLM response to prompt
-    with torch.no_grad():
-        output = model.generate(
-            input_ids=input_ids,
-            attention_mask=attention_mask,
-            pad_token_id=tokenizer.pad_token_id,
-            max_new_tokens=20, # set very low, the LLM should return a move in the first few tokens
-        )
-
-    # convert tokens back to text
-    new_tokens = output[0][input_ids.shape[1]:]
-
-    # return LLM response as text
-    return tokenizer.decode(new_tokens, skip_special_tokens=True).strip()
-
-
-# ============================
 # THE BIG FISH
 # ============================
 
@@ -287,7 +139,7 @@ def get_sf_player_engine(skill: int | None) -> chess.engine.SimpleEngine:
 
 '''
 Helper function to return the best move in a given position.
-Using Stockfish 18 at depth=25.
+Using Stockfish 18 at depth=20.
 
 Returns the best move in UCI format as a string.
 '''
@@ -416,212 +268,6 @@ def evaluate_sf_model(model_name: str, skill: int | None, depth: int, puzzles_by
     # return overall results for display
     return (total_puzzles_solved, total_puzzles, total_positions_correct, total_positions, None)
 
-
-# ============================
-# LLM EVALUATION
-# ============================
-
-'''
-Important to note that LLMs are given 1 try per puzzle in this current implementatation.
-This is a much more realistic attempt to measure LLM proficiency with chess.
-There are very few instances where a player is allowed to try multiple moves in a live game.
-e.g. Chess.com online games, lichess.org* online games, OTB chess, common sense
-'''
-
-'''
-*Please please please use Lichess you get unlimited puzzles and no ads
-it is like Linux vs. Windows but without the struggle of learning Linux
-'''
-
-'''
-Back on track, this helper function evaluates a LLM on N samples of X puzzle themes.
-It is called by evaluate_llm_model() which is called by main().
-Each LLM is tested on both normal and cheating themes.
-In case you missed my previous comment directly above this function,
-LLMs are given only 1 try per puzzle for realism's sake.
-
-label - label for final results display
-model - LLM
-tokenizer - tokenizer for LLM
-device - the device the LLM is loaded on
-puzzles_by_theme - sample of N puzzles from X themes
-judge_engine - SF18 instance running at depth=25, used to check for alternative solutions to mate-in-X puzzles
-cheating - bool which sets prompts to normal or "cheating" modes
-'''
-def evaluate_llm_pass(label: str, model, tokenizer, device: str,
-                      puzzles_by_theme: dict, judge_engine: chess.engine.SimpleEngine,
-                      cheating: bool):
-    
-    # print stuff
-    print(f'\n{"=" * 70}')
-    print(f'MODEL: {label}')
-    print(f'{"=" * 70}')
-
-    # results for different levels
-    total_positions_correct = 0
-    total_positions = 0
-    total_puzzles_solved = 0
-    total_puzzles = 0
-
-    # measures "sanity" of each LLM
-    # number of parses failed = 1 / sanity
-    total_parse_failed = 0
-
-    # For each puzzle theme...
-    for theme, (puzzles, mate_depth) in puzzles_by_theme.items():
-
-        # print it
-        print(f'\n  Theme: {theme} ({len(puzzles)} puzzles)')
-        print(f'  {"-" * 60}')
-
-        # theme-wide results
-        theme_positions_correct = 0
-        theme_positions_total = 0
-        theme_puzzles_solved = 0
-        theme_parse_failed = 0
-
-        # For each puzzle...
-        for puzzle_idx, puzzle in enumerate(puzzles):
-
-            # track num puzzle positions solved
-            puzzle_positions_correct = 0
-            print(f'\n  Puzzle {puzzle_idx + 1}/{len(puzzles)}:')
-
-            # For each puzzle...
-            for pos_idx, (fen, best_uci, best_san) in enumerate(puzzle):
-
-                # A correct move should reduce the eval of the position
-                # so for mate-in-N puzzles, the eval should be mate-in-(N-1)
-                remaining_mate = mate_depth - pos_idx
-
-                # Build normal/"cheating" prompt
-                prompt = build_prompt_cheating(fen, remaining_mate) if cheating else build_prompt(fen)
-
-                # query LLM on puzzle position
-                raw_response = generate_response(model, tokenizer, prompt, device)
-
-                # attempt to parse a valid move from LLM response
-                board = chess.Board(fen)
-                predicted_uci = parse_move(raw_response, board)
-
-                # If no valid move is parsed, FAIL!
-                if predicted_uci is None:
-                    theme_parse_failed += 1
-                    total_parse_failed += 1
-
-                # check if the move is actually accurate
-                correct = check_position_accuracy(predicted_uci or '', fen, best_uci, best_san, judge_engine)
-
-                # print position-wide results
-                status = 'CORRECT' if correct else 'WRONG'
-                parse_note = ' (parse failed)' if predicted_uci is None else ''
-                print(f'    Position {pos_idx + 1}:')
-                print(f'      FEN:           {fen}')
-                print(f'      Best move UCI: {best_uci}')
-                print(f'      Raw response:  {raw_response!r}')
-                print(f'      Parsed UCI:    {predicted_uci!r}{parse_note}')
-                print(f'      Result:        [{status}]')
-
-                # update results if LLM response was correct
-                if correct:
-                    puzzle_positions_correct += 1
-                    theme_positions_correct += 1
-                    total_positions_correct += 1
-                theme_positions_total += 1
-                total_positions += 1
-            
-            # check if LLM solved all puzzle positions
-            puzzle_solved = puzzle_positions_correct == len(puzzle)
-
-            # if so, update the results
-            if puzzle_solved:
-                theme_puzzles_solved += 1
-                total_puzzles_solved += 1
-            total_puzzles += 1
-
-            # print puzzle-wide results
-            puzzle_status = 'SOLVED' if puzzle_solved else 'FAILED'
-            print(f'    Puzzle result: [{puzzle_status}] ({puzzle_positions_correct}/{len(puzzle)} positions correct)')
-
-        # Calculate and print theme-wide puzzle + position accuracy
-        theme_pos_acc = theme_positions_correct / theme_positions_total * 100 if theme_positions_total > 0 else 0
-        theme_puzzle_acc = theme_puzzles_solved / len(puzzles) * 100 if puzzles else 0
-        print(f'\n  {theme} summary:')
-        print(f'    Puzzles solved:    {theme_puzzles_solved}/{len(puzzles)} ({theme_puzzle_acc:.1f}%)')
-        print(f'    Positions correct: {theme_positions_correct}/{theme_positions_total} ({theme_pos_acc:.1f}%)')
-        print(f'    Parse failures:    {theme_parse_failed}/{theme_positions_total}')
-
-    # Calculate and print overall puzzle + position accuracy
-    overall_pos_acc = total_positions_correct / total_positions * 100 if total_positions > 0 else 0
-    overall_puzzle_acc = total_puzzles_solved / total_puzzles * 100 if total_puzzles > 0 else 0
-    print(f'\n  OVERALL ({label}):')
-    print(f'    Puzzles solved:    {total_puzzles_solved}/{total_puzzles} ({overall_puzzle_acc:.1f}%)')
-    print(f'    Positions correct: {total_positions_correct}/{total_positions} ({overall_pos_acc:.1f}%)')
-    print(f'    Parse failures:    {total_parse_failed}/{total_positions}')
-
-    # return overall accuracy for display
-    return (total_puzzles_solved, total_puzzles, total_positions_correct, total_positions, total_parse_failed)
-
-'''
-This helper function loads and evaluates a LLM model on a sample of N puzzles from X themes before unloading it.
-Performance for both normal and "cheating" prompts is measured.
-'''
-def evaluate_llm_model(config: dict, puzzles_by_theme: dict, judge_engine: chess.engine.SimpleEngine):
-    
-    # LLM config
-    name = config['name']
-    path = config['path']
-
-    # print (print)
-    print(f'\n{"#" * 70}')
-    print(f'Loading LLM: {name} ({path})')
-    print(f'{"#" * 70}')
-
-    # Use LlamaTokenizer if it is a LLaMa model, AutoTokenizer otherwise
-    if config['llama']:
-        tokenizer = LlamaTokenizer.from_pretrained(path)
-        model = LlamaForCausalLM.from_pretrained(
-            path, torch_dtype=torch.float16, device_map='auto',
-            offload_folder=OFFLOAD_DIR
-        )
-    else:
-        tokenizer = AutoTokenizer.from_pretrained(path)
-        model = AutoModelForCausalLM.from_pretrained(
-            path, torch_dtype=torch.float16, device_map='auto',
-            offload_folder=OFFLOAD_DIR
-        )
-    
-    # Set pad_token_id just in case
-    if tokenizer.pad_token_id is None:
-        tokenizer.pad_token_id = tokenizer.eos_token_id
-
-    # Set model to inference mode and load onto GPU
-    model.eval()
-    device = 'cuda'
-    print('Model loaded.\n')
-
-    # final LLM results
-    results = {}
-
-    # Evaluate LLM on N sample of X theme puzzles using the normal prompt
-    normal_label = f'{name} (normal prompt)'
-    results[normal_label] = evaluate_llm_pass(
-        normal_label, model, tokenizer, device, puzzles_by_theme, judge_engine, cheating=False
-    )
-
-    # Evaluate LLM on N sample of X theme puzzles using the "cheating" prompt
-    cheating_label = f'{name} (cheating prompt)'
-    results[cheating_label] = evaluate_llm_pass(
-        cheating_label, model, tokenizer, device, puzzles_by_theme, judge_engine, cheating=True
-    )
-
-    # free GPU memory before loading next model
-    del model
-    torch.cuda.empty_cache()
-
-    return results
-
-
 # ============================
 # KINGPT EVALUATION
 # ============================
@@ -711,7 +357,7 @@ Evaluates a loaded KINGPT model instance on N samples of X puzzle themes.
 Same structure as evaluate_llm_pass, besides there being no cheating variant 
 (KINGPT's FEN + best move pair vocab doesn't let me do it without errors)
 and it wouldn't help anyways because...
-Since KINGPT is a small/stupid language model, it literally doesn't understand natural language.
+KINGPT is a small/stupid language model, so it literally doesn't understand natural language.
 Which kind of goes against the entire point of LLMs as general tools, but KINGPT is still technically an LLM.
 I could babble on about this forever but this is likely already somewhere in the paper I wrote.
 
@@ -905,15 +551,6 @@ def main():
     # results summary
     summary = {}
 
-    # evaluate SF models on all puzzles
-    for model_name, config in SF_MODELS.items():
-        summary[model_name] = evaluate_sf_model(model_name, config['skill'], config['depth'], puzzles_by_theme, judge_engine)
-
-    # evaluate LLM models on all puzzles
-    for config in LLM_MODELS:
-        llm_results = evaluate_llm_model(config, puzzles_by_theme, judge_engine)
-        summary.update(llm_results)
-
     # evaluate KINGPT checkpoints on all puzzles
     for model_name, ckpt_path in KINGPT_MODELS.items():
         summary[model_name] = evaluate_kingpt_model(model_name, ckpt_path, puzzles_by_theme, judge_engine)
@@ -921,7 +558,7 @@ def main():
     # IMPORTANT: call engine.quit() so you don't use up all of the memory
     judge_engine.quit()
 
-    # Print final summary table across SF/LLM models
+    # Print final summary table across KINGPT variants/configs
     print(f'\n\n{"=" * 95}')
     print('FINAL SUMMARY')
     print(f'{"=" * 95}')

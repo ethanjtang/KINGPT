@@ -1,4 +1,5 @@
 # Literally taken directly from karpathy's nanoGPT repository (https://github.com/karpathy/nanoGPT)
+# Go there and read his comments; they are much better than mine.
 
 """
 Full definition of a GPT Language Model, all of it in this single file.
