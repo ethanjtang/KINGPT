@@ -1,7 +1,7 @@
 """
 This program tests different KINGPT checkpoints on a sample of mate-in-X puzzles.
 It is identical to eval_all_models.py in my GAMBIT repo (https://github.com/ethanjtang/GAMBIT) except for KINGPT inference.
-Since KINGPT was trained using a fork of karpathy's nanoGPT repository (https://github.com/karpathy/nanoGPT).
+KINGPT was trained using a fork of karpathy's nanoGPT repository (https://github.com/karpathy/nanoGPT).
 
 A move is treated as correct if it matches the best move recorded OR
 yields a mate score equivalent to the best move (decreases the mate-in-X evaluation by 1).
