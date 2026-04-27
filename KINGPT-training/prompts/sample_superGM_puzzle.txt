@@ -1,0 +1,3 @@
+<|position-start|>
+FEN: 8/1p6/7p/8/3pk3/1P3RPP/3KPr2/8 b - - 5 43
+Best move (UCI): 
