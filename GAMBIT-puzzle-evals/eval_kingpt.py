@@ -55,10 +55,10 @@ PUZZLE_FILES = {
 # Maps display name -> path to checkpoint file (.pt)
 # All checkpoints share the same META_PATH as their vocab file
 KINGPT_MODELS = {
-    'kingpt-puzzles-1m': 'kingpt-models/kingpt_puzzles-only_1m-iters.pt',
-    'kingpt-selfplay-50k': 'kingpt-models/kingpt_sf-selfplay-only_50k-iters.pt',
-    'kingpt-selfplay-500k': 'kingpt-models/kingpt_sf-selfplay-only_500k-iters.pt', # testing a really overfitted version for fun
-    'kingpt-combined-1m': 'kingpt-models/kingpt_sf-selfplay-only_500k-iters.pt',
+    'kingpt-woodpecker': 'kingpt-models/kingpt_woodpecker_1m-iters.pt',
+    'kingpt-beaver': 'kingpt-models/kingpt_beaver_50k-iters.pt',
+    'kingpt-beaver-OVERFIT': 'kingpt-models/kingpt_beaver_500k-iters_massivelyoverfit.pt', # testing a really overfitted version for fun
+    'kingpt-chimera': 'kingpt-models/kingpt_chimera_1m-iters.pt',
     # Note that the selfplay model was trained only for 50k iters due to val loss converging much quicker
     # due to 1k selfplay games giving a lot less unique positions than 12m puzzles
 }
@@ -121,6 +121,54 @@ def fetch_puzzle_sample() -> dict:
 
     # (puzzles, mate_depth)
     return puzzles_by_theme
+
+'''
+Helper function which attempts to parse a valid UCI or SAN format move from LLM output.
+Takes the first, leftmost match, with UCI format matches having priority over SAN matches.
+
+Takes as input:
+text - LLM output
+board - current chess board for LLM-generated move
+Returns None if no legal move is able to be parsed from the current board state.
+'''
+def parse_move(text: str, board: chess.Board) -> str | None:
+
+    # get all words from LLM response
+    words = text.split()
+
+    # parse all possible substrings which could contain valid chess moves
+    substrings = [
+        ' '.join(words[i:j])
+        for i in range(len(words))
+        for j in range(i + 1, len(words) + 1)
+    ]
+
+    # For each candidate move in the list of substrings...
+    for candidate in substrings:
+        # I will claim the Royal Sceptre and ...
+        
+        # Attempt to parse a UCI move
+        try:
+            move = chess.Move.from_uci(candidate.lower())
+            if move in board.legal_moves:
+                return candidate.lower()
+        except ValueError:
+            pass
+    
+    # If no valid UCI move was parsed..
+    # For each candidate move in the list of substrings...
+    for candidate in substrings:
+        try:
+            # Attempt to parse a SAN move
+            move = board.parse_san(candidate)
+            # If one is parsed, convert it to UCI
+            # SAN is a really horrible format for everyone involved (even humans!)
+            if move in board.legal_moves:
+                return move.uci()
+        except (ValueError, chess.IllegalMoveError, chess.InvalidMoveError, chess.AmbiguousMoveError):
+            pass
+
+    return None
 
 # ============================
 # THE BIG FISH
