@@ -1,3 +1,3 @@
-# oopsie
+# KINGPT
 
-combined train loss 0.3594, val loss 0.3710
+mine diamonds (mine diamonds)
