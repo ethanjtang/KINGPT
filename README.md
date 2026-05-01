@@ -114,8 +114,6 @@ In the full set of 1050 self-play games, 9772/107018 = **~9.13% of positions ove
 
 Meanwhile, in the subset of games played by Stockfish 18 at FULL POWER, 1070/7069 = **~15.1% of positions overlap** across games.
 
-This suggests that the dataset generation + LLM finetuning method used in Zhang et. al. 2025's ["Complete Chess Games Enable LLM Become Chess Masters"](https://arxiv.org/abs/2501.17186) may be flawed. Their model ChessLLM's success against weak versions of Stockfish is likely caused by memorization and regurgitation of frequently seen position + best move pairs in their training set of Stockfish-labeled games + pass@K=10 being a generous evaluation metric.
-
 ## TODOs
 
 - (Optional) Question if training a chess-focused large language model is even worth it when we have Stockfish (+ the many other chess engines) as external verifiers, which can either be called directly by general LLMs (via a wrapper) or utilized in a LLM-Modulo system (as an external verifier to check LLM generation).
