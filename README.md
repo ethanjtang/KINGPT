@@ -39,7 +39,7 @@ I used the instructions for training a mini-Shakespeare model (with char-level t
 
 ### Dependencies
 
-```
+```bash
 pip install torch numpy transformers datasets tiktoken wandb tqdm
 ```
 
@@ -108,7 +108,7 @@ You can also alternatively fix this issue by using a seperate stronger "judge" e
 
 ## Dataset Stats & Overlap
 
-It is important to note that Stockfish 18 self-play games have significant position overlap even for games between instances of differing skill levels.
+It is important to note that Stockfish 18 self-play games have significant position overlap!
 
 In the full set of 1050 self-play games, 9772/107018 = **~9.13% of positions overlap** across games (present in 2+ games).
 
