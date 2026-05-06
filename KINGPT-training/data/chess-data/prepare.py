@@ -11,7 +11,7 @@ import pickle
 import requests
 import numpy as np
 
-# download the tiny shakespeare dataset
+# load the position + best move pairs dataset
 input_file_path = os.path.join(os.path.dirname(__file__), 'data.txt')
 
 with open(input_file_path, 'r') as f:
