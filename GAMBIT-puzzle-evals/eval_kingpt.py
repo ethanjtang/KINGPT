@@ -301,7 +301,7 @@ def evaluate_sf_model(model_name: str, skill: int | None, depth: int, puzzles_by
         print(f'    Puzzles solved:    {theme_puzzles_solved}/{len(puzzles)} ({theme_puzzle_acc:.1f}%)')
         print(f'    Positions correct: {theme_positions_correct}/{theme_positions_total} ({theme_pos_acc:.1f}%)')
 
-    # calculate overall positionn and puzzle-wide accuracy for all puzzles across all themes
+    # calculate overall position and puzzle-wide accuracy for all puzzles across all themes
     overall_pos_acc = total_positions_correct / total_positions * 100 if total_positions > 0 else 0
     overall_puzzle_acc = total_puzzles_solved / total_puzzles * 100 if total_puzzles > 0 else 0
 
