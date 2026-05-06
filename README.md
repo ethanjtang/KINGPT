@@ -127,3 +127,7 @@ Meanwhile, in the subset of games played by Stockfish 18 at FULL POWER, 1070/706
 All code in this repo was initially forked from Andrej Karpathy's [nanoGPT repository](https://github.com/karpathy/nanoGPT).
 
 The author acknowledges Research Computing at Arizona State University for providing computing and storage resources to train all variants of KINGPT.
+
+## Citations
+
+**Citations COMING SOON**
